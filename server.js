@@ -152,10 +152,10 @@ async function authorizeB2() {
     headers: { Authorization: `Basic ${authString}` },
   });
   
-  authCache = {
+   authCache = {
     token: response.data.authorizationToken,
-    apiUrl: response.data.apiInfo.storageApi.apiUrl,
-    downloadUrl: response.data.apiInfo.storageApi.downloadUrl,
+    apiUrl: response.data.apiUrl,
+    downloadUrl: response.data.downloadUrl,
     expiresAt: Date.now() + (23 * 60 * 60 * 1000),
   };
   
