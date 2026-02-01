@@ -650,7 +650,7 @@ const HTML_FRONTEND = `<!DOCTYPE html>
       try {
         const response = await fetch('/api/health');
         const data = await response.json();
-        setServerStatus(data.success && data.data?.status === 'ok' ? 'online' : 'offline');
+       setServerStatus(data.success && data.status === 'ok' ? 'online' : 'offline');
       } catch { setServerStatus('offline'); }
     }
     
